@@ -119,13 +119,43 @@ change tabs variant="line"
 
 ---
 
-## 7. Extract right sidebar to separate component function
+## 7. Extract right (tools) sidebar to separate component function
 
 - left resizable panels in App.tsx
 - extract all tab related data to new file tools-sidebar.tsx
 
+---
 
+## 8. App Layout
 
+Introduce AppLayout taking 4 components:
+- header - top header component
+- sidebar - left sidebar component
+- main - main (document) component
+- tools - right (tools) sidebar
+
+```tsx
+<AppLayout
+  header={<SiteHeader />}
+  sidebar={<AppSidebar />}
+  main={<ComponentExample />}
+  tools={<ToolsSidebar />}
+/>
+```
+
+---
+
+## 8. Provider
+
+Introduce LayoutProvider responsible for:
+- remembers in local storage layout state
+- state of AppSidebar (is open)
+- resizable panel proportions
+- is main panel collapsed
+- is tool panel collapsed
+- current tab selected in ToolsSidebar
+
+Add some icon buttons to header to test collapse.
 
 ---
 

@@ -1,8 +1,17 @@
+"use client";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { useLayout, type ToolsTabValue } from "@/contexts/layout-context";
 
 export function ToolsSidebar() {
+  const { toolsTab, setToolsTab } = useLayout();
+
   return (
-    <Tabs defaultValue="comments" className="flex h-full w-full flex-col">
+    <Tabs
+      value={toolsTab}
+      onValueChange={(v) => setToolsTab(v as ToolsTabValue)}
+      className="flex h-full w-full flex-col"
+    >
       <TabsList variant="line">
         <TabsTrigger value="ai">AI Chat</TabsTrigger>
         <TabsTrigger value="comments">Comments</TabsTrigger>
