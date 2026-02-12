@@ -34,40 +34,30 @@ export function AppLayout({ header, sidebar, main, tools }: AppLayoutProps) {
 
   return (
     <SidebarProvider
-        className="flex flex-col"
-        open={sidebarOpen}
-        onOpenChange={setSidebarOpen}
-      >
-        {header}
-        <div className="flex flex-1">
-          {sidebar}
-          <SidebarInset>
-            <ResizablePanelGroup
-              groupRef={resizableGroupRef}
-              orientation="horizontal"
-              defaultLayout={resizableLayout}
-              onLayoutChanged={handleLayoutChanged}
-            >
-              <ResizablePanel
-                id="main"
-                defaultSize={50}
-                minSize={0}
-                collapsible
-              >
-                {main}
-              </ResizablePanel>
-              <ResizableHandle />
-              <ResizablePanel
-                id="tools"
-                defaultSize={50}
-                minSize={0}
-                collapsible
-              >
-                {tools}
-              </ResizablePanel>
-            </ResizablePanelGroup>
-          </SidebarInset>
-        </div>
+      className="flex flex-col"
+      open={sidebarOpen}
+      onOpenChange={setSidebarOpen}
+    >
+      {header}
+      <div className="flex flex-1">
+        {sidebar}
+        <SidebarInset>
+          <ResizablePanelGroup
+            groupRef={resizableGroupRef}
+            orientation="horizontal"
+            defaultLayout={resizableLayout}
+            onLayoutChanged={handleLayoutChanged}
+          >
+            <ResizablePanel id="main" defaultSize={50} minSize={0} collapsible>
+              {main}
+            </ResizablePanel>
+            <ResizableHandle />
+            <ResizablePanel id="tools" defaultSize={50} minSize={0} collapsible>
+              {tools}
+            </ResizablePanel>
+          </ResizablePanelGroup>
+        </SidebarInset>
+      </div>
     </SidebarProvider>
   );
 }

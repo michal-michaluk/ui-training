@@ -109,13 +109,12 @@ Use this variable where you need the header offset (e.g. `top: var(--header-heig
 
 ## 6. Add Resizable and Tabs inside SidebarInset
 
-Use [Resizable](https://ui.shadcn.com/docs/components/radix/resizable) to give the main area resizable panels (e.g. document + secondary panel). 
+Use [Resizable](https://ui.shadcn.com/docs/components/radix/resizable) to give the main area resizable panels (e.g. document + secondary panel).
 
 Add [tabs](https://ui.shadcn.com/docs/components/radix/tabs) to the right panel.
 
 change tabs variant="line"
 `<TabsList variant="line">`
-
 
 ---
 
@@ -129,6 +128,7 @@ change tabs variant="line"
 ## 8. App Layout
 
 Introduce AppLayout taking 4 components:
+
 - header - top header component
 - sidebar - left sidebar component
 - main - main (document) component
@@ -148,6 +148,7 @@ Introduce AppLayout taking 4 components:
 ## 8. Provider
 
 Introduce LayoutProvider responsible for:
+
 - remembers in local storage layout state
 - state of AppSidebar (is open)
 - resizable panel proportions
