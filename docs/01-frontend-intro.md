@@ -107,7 +107,29 @@ Use this variable where you need the header offset (e.g. `top: var(--header-heig
 
 ---
 
-## 6. Add all components
+## 6. Add Resizable and Tabs inside SidebarInset
+
+Use [Resizable](https://ui.shadcn.com/docs/components/radix/resizable) to give the main area resizable panels (e.g. document + secondary panel). 
+
+Add [tabs](https://ui.shadcn.com/docs/components/radix/tabs) to the right panel.
+
+change tabs variant="line"
+`<TabsList variant="line">`
+
+
+---
+
+## 7. Extract right sidebar to separate component function
+
+- left resizable panels in App.tsx
+- extract all tab related data to new file tools-sidebar.tsx
+
+
+
+
+---
+
+## (Optional). Add all components
 
 To install every shadcn component in one go (useful for exploring or AI-assisted UIs):
 
