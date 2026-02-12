@@ -1,4 +1,4 @@
-import { SearchForm } from "@/components/search-form"
+import { SearchForm } from "@/components/search-form";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -6,14 +6,14 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb"
-import { Button } from "@/components/ui/button"
-import { Separator } from "@/components/ui/separator"
-import { useSidebar } from "@/components/ui/sidebar"
-import { PanelLeftIcon } from "lucide-react"
+} from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+import { useSidebar } from "@/components/ui/sidebar";
+import { PanelLeftIcon } from "lucide-react";
 
 export function SiteHeader() {
-  const { toggleSidebar } = useSidebar()
+  const { toggleSidebar } = useSidebar();
 
   return (
     <header className="bg-background sticky top-0 z-50 flex w-full items-center border-b">
@@ -24,8 +24,7 @@ export function SiteHeader() {
           size="icon"
           onClick={toggleSidebar}
         >
-          <PanelLeftIcon
-          />
+          <PanelLeftIcon />
         </Button>
         <Separator
           orientation="vertical"
@@ -45,5 +44,5 @@ export function SiteHeader() {
         <SearchForm className="w-full sm:ms-auto sm:w-auto" />
       </div>
     </header>
-  )
+  );
 }
